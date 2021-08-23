@@ -1,0 +1,289 @@
+<html>
+<head>
+	<title>123</title>
+	<meta charset="utf-8">
+    <!-- 引入 ECharts 文件 -->
+    <script src="js/echarts.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/common.css" /> 
+	<script src="js/script.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="body body-fd">
+		<div class="content">
+			<div class="left">
+				<div class="left_head">
+					<span style="margin-right: 20px;">2021年8月4日</span>
+					<span style="margin-right: 20px;">星期三</span>
+					<span>15:24</span>
+				</div>
+				<div class="content_box">
+					<div class="content_box_title">
+						<span>热门搜索词</span>
+					</div>
+					<div class="content_box_content">
+						<div class="one ">
+							<div class="one_box">关键词</div>
+							<div class="one_box">点击量</div>
+							<div class="one_box">展现量</div>
+							<div class="one_box">排名</div>
+						</div>
+						<div class="one bacolor">
+							<div class="one_box">羊肉串</div>
+							<div class="one_box">988</div>
+							<div class="one_box">862</div>
+							<div class="one_box">01</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="content_box">
+					<div class="content_box_title">
+						<span>男女老板比例</span>
+					</div>
+					<div class="content_box_content">
+						<div class="circle_content">
+						<div class="shape">
+						    <div class="bottom"></div>
+						    <div class="cover">100%</div>
+						    <div class="ring-left"></div>
+						    <div class="ring-right"></div>
+						    <div class="ring-hide"><div></div></div>
+						</div>
+						<div class="circle_title">男老板<span style="color: #2AFF97;font-size: 22px;">542</span>人</div>
+						</div>
+						
+						<div class="circle_content">
+						<div class="shape_2">
+						    <div class="bottom"></div>
+						    <div class="cover">100%</div>
+						    <div class="ring-left"></div>
+						    <div class="ring-right"></div>
+						    <div class="ring-hide"><div></div></div>
+						</div>
+						<div class="circle_title">女老板<span style="color: #FFD731;font-size: 22px;">339</span>人</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="middle">
+				<div class="middle_title">·食图图CDD大数据平台·</div>
+				<div class="middle_title2">——— 内容传播动态趋势全览平台 ———</div>
+				<div class="num_content">
+						<div class="num_content_left">今日访问</div>
+					<article>
+					  <!--<p>这是创业以来赚的钱</p>-->
+					  <output>
+						<!--<span class="symbol">¥</span>-->
+						<span class="number u8"></span>
+						<span class="number u7"></span>
+						<span class="number u6"></span>
+						<span class="symbol u6">,</span>
+						<span class="number u5"></span>
+						<span class="number u4"></span>
+						<span class="number u3"></span>
+						<!--<span class="symbol">,</span>-->
+						<span class="number u2"></span>
+						<span class="number u1"></span>
+						<span class="number u0"></span>
+					  </output>
+					</article>
+					<div class="num_content_right">次</div>
+				</div>
+			
+				<div class="content_box_big">
+					<div class="content_box_title_big">
+						<span>餐饮热点新闻视频</span>
+					</div>
+					<div class="content_box_content content_box_content_big">
+						<video id="videoHa" autoplay="" loop="" muted="" style="width: 90% !important;">
+						   <source preload="" src="https://cdn.shitutu.com/1615861657276.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+			
+			<div class="content_right">
+				<div class="left_head">
+					<span style="margin-right: 20px;">2021年8月4日</span>
+					<span style="margin-right: 20px;">星期三</span>
+					<span>15:24</span>
+				</div>
+				<div class="content_box"  style="float: right;">
+					<div class="content_box_title content_box_title2">
+						<span>图片下载量地区分布</span>
+					</div>
+					<div class="content_box_content">
+						  <div id="container" style="height: 100%"></div>
+					</div>
+				</div>
+				
+				<div class="content_box"  style="float: right;">
+					<div class="content_box_title content_box_title2">
+						<span>全网餐饮热点话题</span>
+					</div>
+					<div class="content_box_content">
+						     <ul id="box" class="news"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script> -->
+	<script type="text/javascript">
+		setPercentValue(60);
+		function setPercentValue(value) {
+		    let cover = document.querySelector('.shape>.cover'),
+		        left = document.querySelector('.shape>.ring-left'),
+		        hide = document.querySelector('.shape>.ring-hide');
+		    let deg;//左环转动角度
+		    if (Number.isNaN(value) || value < 0) value = 0;
+		    if (value > 100) value = 100;
+		    if(value % 1 !== 0){  //若value为小数，保留一位小数
+		        value = value.toFixed(1);
+		    }
+		    cover.innerText = value + "%";
+		    if (value < 50) {  //值小于50，显示遮罩
+		        hide.style.display = "inherit";
+		        deg = (50 - value)/50 * 180;
+		    } else {  //值大于或等于50，不显示遮罩
+		        hide.style.display = "none";
+		        deg =  (50 - (value - 50))/50 * 180;
+		    }
+		    left.style.transform = "rotate("+ (-deg) +"deg)";
+		}
+		setPercentValue2(40);
+		function setPercentValue2(value) {
+		    let cover = document.querySelector('.shape_2>.cover'),
+		        left = document.querySelector('.shape_2>.ring-left'),
+		        hide = document.querySelector('.shape_2>.ring-hide');
+		    let deg;//左环转动角度
+		    if (Number.isNaN(value) || value < 0) value = 0;
+		    if (value > 100) value = 100;
+		    if(value % 1 !== 0){  //若value为小数，保留一位小数
+		        value = value.toFixed(1);
+		    }
+		    cover.innerText = value + "%";
+		    if (value < 50) {  //值小于50，显示遮罩
+		        hide.style.display = "inherit";
+		        deg = (50 - value)/50 * 180;
+		    } else {  //值大于或等于50，不显示遮罩
+		        hide.style.display = "none";
+		        deg =  (50 - (value - 50))/50 * 180;
+		    }
+		    left.style.transform = "rotate("+ (-deg) +"deg)";
+		}
+	</script>
+       <script type="text/javascript">
+   var dom = document.getElementById("container");
+   var myChart = echarts.init(dom);
+   var app = {};
+   
+   var option;
+   
+   
+   
+   option = {
+       title: {
+           text: '',
+           subtext: '',
+           left: 'center'
+       },
+       tooltip: {
+           trigger: 'item',
+           formatter: '{a} <br/>{b} : {c} ({d}%)'
+       },
+       legend: {
+           left: 'center',
+           top: 'bottom',
+           data: ['rose1', 'rose2', 'rose3', 'rose4', 'rose5', 'rose6', 'rose7', 'rose8']
+       },
+       toolbox: {
+           show: false,
+           feature: {
+               mark: {show: false},
+               dataView: {show: false, readOnly: false},
+               restore: {show: false},
+               saveAsImage: {show: false}
+           }
+       },
+       series: [
+        
+           {
+               name: '面积模式',
+               type: 'pie',
+               radius: [20, 70],
+               center: ['50%', '50%'],
+               roseType: 'area',
+               itemStyle: {
+                   borderRadius: 5
+               },
+               data: [
+                   {value: 30, name: 'rose 1'},
+                   {value: 28, name: 'rose 2'},
+                   {value: 26, name: 'rose 3'},
+                   {value: 24, name: 'rose 4'},
+                   {value: 22, name: 'rose 5'},
+                   {value: 20, name: 'rose 6'},
+                   {value: 18, name: 'rose 7'},
+                   {value: 16, name: 'rose 8'}
+               ]
+           }
+       ]
+   };
+   
+   if (option && typeof option === 'object') {
+       myChart.setOption(option);
+   }
+   
+           </script>
+		   
+		   <script>
+		           // 定义数组
+		           var news = [
+					    '#疫情重创餐饮业，西贝撑不过3个月#',
+						'#老乡鸡土味发布会成为2020年经典营销案例#',
+						'#蜜雪冰城全球门店超过1万家，新茶饮迎来黄金时代#',
+						'#瑞幸因造假门在纳斯达克退市 中概股海外声誉受损#',
+						'#海底捞市值接近百度 多品牌战略支持千亿市值#',
+						'#长沙文和友排号1万桌 十一黄金周餐饮行业触底反弹#',
+					];
+		           // 获取元素
+		           var input = document.getElementById('input');
+		           var btn = document.getElementById('btn');
+		           var box = document.getElementById('box');
+		           // 把原有的新闻显示在页面中
+		           carousel();
+		           // 把渲染结构的内容封装为一个函数
+		           function carousel(){
+		               // 定义一个空字符串
+		               var str = '';
+		               // 遍历数组,把数组里面的每一个值都重复拿出来添加到 li 标签里再赋值给str
+		               news.forEach(function(item){
+		                   str +=`<li>${item}</li>`;
+		               });
+		               // 把 str 的内容给到 box 结构里
+		               box.innerHTML = str;
+		           }
+		         
+		           /*
+		           【1】间隔执行函数,每隔多少时间去执行一次函数，这里 1000 指的是 1s
+		                   setInterval(function(){
+		                       你需要执行的代码
+		                   },1000)
+		           */
+		   
+		           // 设置定时器  新闻的滚动切换（把数组中的最后一条数据 截取出来放入数组中第一条），再次循环 渲染结构
+		           setInterval(function(){
+		               // pop() 在删除数组的最后一个元素  把删除的数据赋值给res
+		               var res = news.pop();
+		               // unshift() 在数组的最前面添加一个元素
+		               news.unshift(res);
+		               // 调用函数，再次渲染结构
+		               carousel();
+		               // 定时，时长设置为2s
+		           },2000);
+		       </script>
+</body>
+</html>
