@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery合作伙伴左右滚动特效 - 站长素材</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/javascript" src="js/ss.js"></script>
+</head>
+<body>
+
+<div class="mr_frbox">
+  
+  <div class="mr_frUl">
+  <ul>
+   <li><a href="http://sc.chinaz.com" target="_blank"><img src="images/mfr_1.jpg" width="123" height="52" /></a><a href="http://sc.chinaz.com" target="_blank"><img src="images/mfr_2.jpg" width="123" height="52" /></a></li>
+   <li><a href="http://sc.chinaz.com" target="_blank"><img src="images/mfr_3.jpg" width="123" height="52" /></a><a href="http://sc.chinaz.com" target="_blank"><img src="images/mfr_6.jpg" width="123" height="52" /></a></li>
+   <li><a href="http://sc.chinaz.com" target="_blank"><img src="images/mfr_4.jpg" width="123" height="52" /></a><a href="http://sc.chinaz.com" target="_blank"><img src="images/mfr_7.jpg" width="123" height="52" /></a></li>
+   <li><a href="http://sc.chinaz.com" target="_blank"><img src="images/mfr_5.jpg" width="123" height="52" /></a><a href="http://sc.chinaz.com" target="_blank"><img src="images/mfr_8.jpg" width="123" height="52" /></a></li>
+  </ul>
+  </div>
+  
+</div>
+<script language="javascript">
+$(".mr_frUl ul li img").hover(function(){$(this).css("border-color","#A0C0EB");},function(){$(this).css("border-color","#d8d8d8")});
+jQuery(".mr_frbox").slide({titCell:"",mainCell:".mr_frUl ul",autoPage:true,effect:"leftLoop",autoPlay:true,vis:3});
+</script>
+
+</body>
+</html>

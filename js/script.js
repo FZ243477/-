@@ -33,5 +33,5 @@ const bubbles = [
 ]
 
 bubbles.forEach(function (el) {
-  setTimeout(`createBubble(${el.time}, "${el.text}")`, el.time * 1000);
+ // setTimeout(`createBubble(${el.time}, "${el.text}")`, el.time * 1000);
 });

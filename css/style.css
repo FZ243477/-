@@ -7,7 +7,6 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   font-family: Palatino, Helvetica, arial, sans-serif;
   overflow: hidden;
 }

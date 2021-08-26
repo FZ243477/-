@@ -11,17 +11,17 @@
     z-index: 99999;
 }
 .content{
-	width: 96%;
+	width: 95.7%;
 	height:auto;
 	margin: 0 auto;
 }
 .left{
 	float: left;
-	width: 520px;
-	height:auto;
+	width: 25%;
+	height:100%;
 }
 .left_head{
-	width: 256px;
+	width: 400px;
 	height: 16px;
 	font-size: 17px;
 	font-family: Microsoft YaHei;
@@ -31,23 +31,35 @@
 	margin-bottom: 60px;
 }
 .content_box{
-	background: #000d4a url(../img/kuang.png) center top;
 	background-size: 100% 100%;
-	width: 480px;
-	height:300px;
-	padding-top:10px ;
-	margin-bottom: 20px;
+	width: 100%;
+	height:27%;
+	margin-bottom: 2%;
+	position: relative;
 }
 .content_box_title{
-	background: #000d4a url(../img/title.png) center top;
-	background-size: 100% 100%;
-	width: 96%;
-	height: 50px;
-	margin-left: 2%;
-	font-size: 18px;
-	font-family: Microsoft YaHei;
-	font-weight: 600;
-	color: #F1F1F1;
+	position: absolute;
+	    top: 1%;
+	    left: 0%;
+	    width: 100%;
+	    height: 50px;
+	    margin-left: 2%;
+	    font-size: 18px;
+	    font-family: Microsoft YaHei;
+	    font-weight: 600;
+	    color: #F1F1F1;
+}
+.titleImg{
+	position: absolute;
+	top:2px;
+	left:2px;
+	width: 98%;
+}
+.titleImgBig{
+	position: absolute;
+	top:0px;
+	left:1px;
+	width: 70%;
 }
 .content_box_title span{
 	margin-left: 50px;
@@ -55,11 +67,17 @@
 	padding-top: 15px;
 	text-align: left;
 }
+.content_box_img{
+	    width: 100%;
+	    height: 100%;
+}
 .content_box_content{
-	width: 90%;
-	height:220px;
-	margin-left: 5%;
-	margin-top: 10px;
+	    width: 90%;
+	    height: 240px;
+	    margin-left: 5%;
+	    position: absolute;
+	    top: 20%;
+	    left: 0;
 }
 .one{
 	display: flex;
@@ -253,9 +271,10 @@
 	    text-align: center;
 }
 .middle{
-	width: 800px;
+	width: 45%;
 	float: left;
 	height:auto;
+	margin-left: 2%;
 }
 .middle_title{
 	width: 520px;
@@ -281,55 +300,54 @@
 	text-align: center;
 }
 .num_content{
-	width:75%;
-	height:auto;
-	position: relative;
-	margin: 0px auto;
-	margin-top: 50px;
+	width: 55%;
+	    height: 6%;
+	    position: relative;
+	    margin: 0px auto;
+	    margin-top: 8%;
 }
 .num_content_left{
-	position: absolute;
-	top: 20px;
-	left: 50px;
+	float: left;
 	width: 100px;
-	height: 24px;
+	height: 43px;
 	font-size: 24px;
 	font-family: Microsoft YaHei;
 	font-weight: 400;
 	color: #FFFFFF;
 	opacity: 0.8;
+	line-height: 43px;
+	margin-left: 7%;
 }
 .num_content_right{
-	position: absolute;
-	top: 20px;
-	right: 100px;
+	float: left;
 	width: 25px;
-	height: 24px;
+	height: 43px;
 	font-size: 24px;
 	font-family: Microsoft YaHei;
 	font-weight: 400;
 	color: #FFFFFF;
 	opacity: 0.8;
-	float: right;
+	line-height: 43px;
 }
 .content_box_big{
-	background: #000d4a url(../img/kuang.png) center top;
-	background-size: 100% 100%;
-	width: 800px;
-	height:460px;
-	padding-top:10px ;
+	position: relative;
+	width: 100%;
+	height:45%;
 	margin-bottom: 20px;
 }
 .content_box_title_big{
-	background: #000d4a url(../img/title.png) left top no-repeat;
-	background-size: 100% 100%;
-	width: 72%;
+	position: absolute;
+	top: 3%;
+	left: 0%;
+	width: 100%;
 	height: 50px;
 	margin-left: 2%;
 	font-size: 18px;
 	font-family: Microsoft YaHei;
 	font-weight: 600;
 	color: #F1F1F1;
+	
+	
 }
 .content_box_title_big span{
 	margin-left: 50px;
@@ -338,12 +356,17 @@
 	text-align: left;
 }
 .content_box_content_big{
-	height: 395px;
+	    width: 90%;
+	    height: 240px;
+	    margin-left: 5%;
+	    position: absolute;
+	    top: 18%;
+	    left: 0;
 }
 
 .content_right{
 	float: right;
-	width: 520px;
+	width:25%;
 	height: auto;
 }
 .content_box_title2{
@@ -369,3 +392,123 @@
 	color: #00FDF6;
 	line-height: 30px;
 }
+.mt14{margin-top:14px;}
+.mr_t1 { background: url(../images/mr_1px.jpg) repeat-x left bottom; height: 40px; padding-right: 16px; }
+.mr_t1name { font: bold 16px/40px "微软雅黑"; color: #FFF; background: #2257A2 url(../images/mr_t1bg.jpg) no-repeat right top; height: 40px; width: 120px; padding-left: 21px; float: left; }
+.mr_t1name img { float: left; margin-top: 9px; margin-right: 6px; display: inline; }
+.mr_frBtnL { float: left; margin: 28px 22px 0px 0px; cursor: pointer; display: inline; }
+.mr_frUl { float: left; height: 130px; width: 540px;margin-left: 20px;margin-top: 30px; }
+.mr_frBtnR { float: right; margin-top: 28px; cursor: pointer; }
+.mr_frUl ul li { display: inline; float: left; height: 115px; width: 125px; margin-right: 13px; overflow: hidden; }
+.mr_frUl ul li img { display: block; margin-bottom: 7px; border: 1px solid #D8D8D8; }
+
+.gif_box{
+	width: 90px;
+	height:150px;
+	float: left;
+	position: relative;
+	margin-top: 15px;
+}
+.gif_box_Number{
+	position: absolute;
+	top:10px;
+	left:0px;
+	width: 90px;
+	height:25px;
+	text-align: center;
+	font-size: 21px;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 25px;
+}
+.gif_box_name{
+	width: 90px;
+	height: 17px;
+	font-size: 16px;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: 29px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+
+
+
+/*对应CSS*/
+    #progress{
+           width: 300px;
+           height: 30px;
+           border:1px solid #ccc;
+           border-radius: 15px;
+           overflow: hidden;  /*注意这里*/
+           box-shadow: 0 0 5px 0px #ddd inset;
+    }          
+    #progress span {
+           display: inline-block;
+           width: 70%;
+           height: 100%;       
+           background: linear-gradient(45deg, #2989d8 30%,#7db9e8 31%,#7db9e8 58%,#2989d8 59%);    
+           background-size: 60px 30px;
+           text-align: left;
+           color:#fff;
+           animation:load 3s ease-in;
+     }
+     @keyframes load{
+           0%{
+               width: 0%;
+           }
+           100%{
+               width:70%;
+           }
+       }
+	   .speed{
+		   width: 90%;
+		   margin-left: 5%;
+		   margin-top: 15px;
+		   height: 20px;
+		   border: 1px solid #1B2C58
+	   }
+	   .speed1{
+		    width: 40px;
+			height:100%;
+			margin-right: 5px;
+			background-color: #2CA4F2;
+			float: left;
+			display: none;
+	   }
+	   .speed_box_title{
+		   width: 90%;
+		   margin-left: 5%;
+		   height: 17px;
+		   font-size: 16px;
+		   font-family: Microsoft YaHei;
+		   font-weight: 400;
+		   color: #FFFFFF;
+		   padding-top: 5px;
+	   }
+	   .disShow{
+		   display: block !important;
+	   }
+	   .browse{
+		   width:260px;
+		   height:50px;
+		   padding-left: 0;
+		float: left;
+		margin-left: 10px;
+	   }
+	   .browse li{
+		   width: 30px;
+		   height:40px;
+		   float: left;
+		   border: 1px solid #044d8e;
+		   margin-right: 10px;
+		   font-size: 41px;
+		   font-family: Microsoft YaHei;
+		   font-weight: 600;
+		   color: #00FDF6;
+		   line-height: 40px;
+		   text-align: center;
+	   }
